@@ -1,0 +1,41 @@
+{
+  "name": "textconv",
+  "version": "1.0.0",
+  "description": "Convert texts.",
+  "main": "lib",
+  "scripts": {
+    "test": "./ci/test.js"
+  },
+  "repository": "okunishinishi/node-textconv",
+  "keywords": [
+    "convert",
+    "text"
+  ],
+  "author": {
+    "name": "okunishinishi",
+    "email": "okunishitaka.com@gmail.com",
+    "url": "http://okunishitaka.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/okunishinishi/node-textconv/issues"
+  },
+  "homepage": "https://github.com/okunishinishi/node-textconv#readme",
+  "dependencies": {
+    "argx": "*",
+    "async": "*"
+  },
+  "devDependencies": {
+    "ape-covering": "*",
+    "ape-releasing": "*",
+    "ape-reporting": "*",
+    "ape-tasking": "*",
+    "ape-testing": "*",
+    "ape-tmpl": "*",
+    "ape-updating": "*",
+    "coz": "*",
+    "coz-tmpl": "*",
+    "injectmock": "*",
+    "sharegit": "*"
+  }
+}
