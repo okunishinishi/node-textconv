@@ -74,6 +74,17 @@ var textconv = require('textconv');
 
 var chopped = textconv.chop("This is a long long text", 18, {ellipsis: true});
 console.log(chopped); //=> This is a long ...
+
+```
+
+### Inline Text.
+Remove line breaks.
+```javascript
+var textconv = require('textconv');
+
+var inlined = textconv.inline("This is line 01 \n This is line 02", {trim: true});
+console.log(inlined); //=> This is line 01 \t This is line 02
+
 ```
 
 
