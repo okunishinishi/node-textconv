@@ -69,6 +69,9 @@ Usage
 
 
 ### Chop Text.
+
+Chop text to fit length.
+
 ```javascript
 var textconv = require('textconv');
 
@@ -78,12 +81,26 @@ console.log(chopped); //=> This is a long ...
 ```
 
 ### Inline Text.
+
 Remove line breaks.
+
 ```javascript
 var textconv = require('textconv');
 
 var inlined = textconv.inline("This is line 01 \n This is line 02", {trim: true});
 console.log(inlined); //=> This is line 01 \t This is line 02
+
+```
+
+### Strip Text.
+
+Remove letters from text head and tail.
+
+```javascript
+var textconv = require('textconv');
+
+var dotRemoved = textconv.strip("This dot end text...", /\./);
+console.log(dotRemoved); //=> This dot end text
 
 ```
 
