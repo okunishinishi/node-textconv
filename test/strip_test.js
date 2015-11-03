@@ -14,7 +14,7 @@ exports.tearDown = function (done) {
 };
 
 exports['Strip'] = function (test) {
-    console.log(strip('..foo/bar/baz...', /\./));
+    test.equal(strip('..foo/bar/baz...', /\./), 'foo/bar/baz');
     test.done();
 };
 
