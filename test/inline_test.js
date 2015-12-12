@@ -1,21 +1,18 @@
 /**
  * Test case for inline.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var inline = require('../lib/inline.js');
+const inline = require('../lib/inline.js'),
+    assert = require('assert');
 
-exports.setUp = function(done) {
-    done();
-};
+describe('inline', ()=> {
 
-exports.tearDown = function(done) {
-    done();
-};
-
-exports['Inline'] = function(test){
-    var text = inline('foo\nbar', {trim:true, joiner:'a'});
-    test.equal(text, 'fooabar');
-    test.done();
-};
+    it('Inline', (done) => {
+        let text = inline('foo\nbar', {trim: true, joiner: 'a'});
+        assert.equal(text, 'fooabar');
+        done();
+    });
+});
 

@@ -1,20 +1,18 @@
 /**
  * Test case for strip.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var strip = require('../lib/strip.js');
+const strip = require('../lib/strip.js'),
+    assert = require('assert');
 
-exports.setUp = function (done) {
-    done();
-};
+describe('strip', () => {
 
-exports.tearDown = function (done) {
-    done();
-};
 
-exports['Strip'] = function (test) {
-    test.equal(strip('..foo/bar/baz...', /\./), 'foo/bar/baz');
-    test.done();
-};
+    it('Strip', (done) => {
+        assert.equal(strip('..foo/bar/baz...', /\./), 'foo/bar/baz');
+        done();
+    });
+});
 

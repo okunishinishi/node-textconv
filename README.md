@@ -73,9 +73,11 @@ Usage
 Chop text to fit length.
 
 ```javascript
-var textconv = require('textconv');
+"use strict";
 
-var chopped = textconv.chop("This is a long long text", 18, {ellipsis: true});
+const textconv = require('textconv');
+
+let chopped = textconv.chop("This is a long long text", 18, {ellipsis: true});
 console.log(chopped); //=> This is a long ...
 
 ```
@@ -85,9 +87,11 @@ console.log(chopped); //=> This is a long ...
 Remove line breaks.
 
 ```javascript
-var textconv = require('textconv');
+"use strict";
 
-var inlined = textconv.inline("This is line 01 \n This is line 02", {trim: true});
+const textconv = require('textconv');
+
+let inlined = textconv.inline("This is line 01 \n This is line 02", {trim: true});
 console.log(inlined); //=> This is line 01 \t This is line 02
 
 ```
@@ -97,9 +101,11 @@ console.log(inlined); //=> This is line 01 \t This is line 02
 Remove letters from text head and tail.
 
 ```javascript
-var textconv = require('textconv');
+"use strict";
 
-var dotRemoved = textconv.strip("This dot end text...", /\./);
+const textconv = require('textconv');
+
+let dotRemoved = textconv.strip("This dot end text...", /\./);
 console.log(dotRemoved); //=> This dot end text
 
 ```

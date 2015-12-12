@@ -1,20 +1,18 @@
 /**
  * Test case for pad.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var pad = require('../lib/pad.js');
+const pad = require('../lib/pad.js'),
+    assert = require('assert');
 
-exports.setUp = function (done) {
-    done();
-};
+describe('pad', ()=> {
 
-exports.tearDown = function (done) {
-    done();
-};
 
-exports['Pad'] = function (test) {
-    test.equal(pad('foo', 7), 'foo    ');
-    test.done();
-};
+    it('Pad', (done) => {
+        assert.equal(pad('foo', 7), 'foo    ');
+        done();
+    });
+});
 

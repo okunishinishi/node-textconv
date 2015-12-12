@@ -1,20 +1,16 @@
 /**
  * Test case for trim.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var trim = require('../lib/trim.js');
+const trim = require('../lib/trim.js'),
+    assert = require('assert');
 
-exports.setUp = function (done) {
-    done();
-};
-
-exports.tearDown = function (done) {
-    done();
-};
-
-exports['Trim'] = function (test) {
-    test.equal(trim('foo '), 'foo');
-    test.done();
-};
+describe('trim', () => {
+    it('Trim', (done) => {
+        assert.equal(trim('foo '), 'foo');
+        done();
+    });
+});
 

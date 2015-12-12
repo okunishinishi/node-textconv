@@ -1,22 +1,19 @@
 /**
  * Test case for chop.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var chop = require('../lib/chop.js');
+const chop = require('../lib/chop.js'),
+    assert = require('assert');
 
-exports.setUp = function (done) {
-    done();
-};
+describe('chop', ()=> {
 
-exports.tearDown = function (done) {
-    done();
-};
-
-exports['Chop'] = function (test) {
-    var text = chop("This is a long long text", 18, {ellipsis: true});
-    console.log(text);
-    test.equal(chop('foobarbaz', 8, {ellipsis: true}), "fooba...");
-    test.done();
-};
+    it('Chop', (done) => {
+        let text = chop("This is a long long text", 18, {ellipsis: true});
+        console.log(text);
+        assert.equal(chop('foobarbaz', 8, {ellipsis: true}), "fooba...");
+        done();
+    });
+});
 
