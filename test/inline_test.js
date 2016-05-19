@@ -2,25 +2,26 @@
  * Test case for inline.
  * Runs with mocha.
  */
-"use strict";
+'use strict'
 
-const inline = require('../lib/inline.js'),
-    assert = require('assert');
+const inline = require('../lib/inline.js')
+const assert = require('assert')
 
-describe('inline', ()=> {
+describe('inline', () => {
+  it('Inline', (done) => {
+    let text = inline('foo\nbar', { trim: true, joiner: 'a' })
+    assert.equal(text, 'fooabar')
+    done()
+  })
 
-    it('Inline', (done) => {
-        let text = inline('foo\nbar', {trim: true, joiner: 'a'});
-        assert.equal(text, 'fooabar');
-        done();
-    });
+  it('Inline a function', (done) => {
+    let text = inline(String(function foo () {
+      console.log('bar')
+    }, { trim: true }))
+    console.log(text)
+    done()
+  })
+})
 
-    it('Inline a function', (done) => {
-        let text = inline(String(function foo() {
-            console.log('bar');
-        }, {trim: true}));
-        console.log(text);
-        done();
-    });
-});
+/* global describe, it */
 
