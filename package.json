@@ -3,8 +3,10 @@
   "version": "3.0.1",
   "description": "Convert texts.",
   "main": "lib",
+  "browser": "shim/browser",
   "scripts": {
-    "test": "./ci/test.js"
+    "test": "./ci/test.js",
+    "prepublish": "./ci/build.js && ./ci/browser.js"
   },
   "repository": "okunishinishi/node-textconv",
   "keywords": [
@@ -23,14 +25,15 @@
   "homepage": "https://github.com/okunishinishi/node-textconv#readme",
   "dependencies": {},
   "devDependencies": {
-    "ape-covering": "^3.0.1",
-    "ape-releasing": "^3.1.1",
+    "ababel": "^1.0.19",
+    "ababel-es2015": "^1.0.2",
+    "amocha": "^1.0.8",
+    "ape-releasing": "^4.0.2",
     "ape-reporting": "^3.0.1",
-    "ape-tasking": "^3.1.2",
-    "ape-testing": "^4.0.0",
-    "ape-tmpl": "^5.0.1",
-    "ape-updating": "^3.0.2",
-    "coz": "^6.0.0",
+    "ape-tasking": "^4.0.7",
+    "ape-tmpl": "^5.0.14",
+    "ape-updating": "^4.0.4",
+    "coz": "^6.0.14",
     "injectmock": "^2.0.0"
   },
   "engines": {
